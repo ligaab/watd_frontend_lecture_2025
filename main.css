@@ -21,13 +21,14 @@ body {
   0%, 100% { color: white; }
   50% { color: #ffd700; } /* gold */
 }
-header:hover h1 {
-  color: #28a745 !important; /* Bootstrap green */
-  animation: none !important;  /* Stop the color cycling animation while hovered */
-}
 
 header h1 {
   animation: colorChange 4s infinite;
+}
+
+header:hover h1 {
+  color: #28a745 !important; /* Bootstrap green */
+  animation: none !important;  /* Stop the color cycling animation while hovered */
 }
 
 /* 2. Pizza card hover scale + shadow */

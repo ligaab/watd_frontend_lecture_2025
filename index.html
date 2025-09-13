@@ -113,133 +113,139 @@
     </div>
 
     <!-- Order Form Section -->
-    <div class="container my-5">
-        <h2 id="orderForm" class="text-center mb-4">Order Your Pizza 🍽️</h2>
-        <form class="row g-3">
-            <!-- Name -->
-            <div class="col-md-6">
-                <label for="name" class="form-label">Full Name</label>
+<div class="container my-5">
+    <h2 id="orderForm" class="text-center mb-4">Order Your Pizza 🍽️</h2>
+    <form method="POST" action="/order" class="row g-3">
+        <!-- Name -->
+        <div class="col-md-6">
+            <label for="name" class="form-label">Full Name</label>
+            <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="John Doe"
+                required
+            />
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-6">
+            <label for="email" class="form-label">Email Address</label>
+            <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+            />
+        </div>
+
+        <!-- Pizza Type -->
+        <div class="col-md-6">
+            <label for="pizzaType" class="form-label">Choose Pizza</label>
+            <select class="form-select" id="pizzaType" name="pizzaType" required>
+                <option selected disabled value="">Choose...</option>
+                <option>Margherita</option>
+                <option>Pepperoni</option>
+                <option>Veggie</option>
+                <option>BBQ Chicken</option>
+                <option>Hawaiian</option>
+            </select>
+        </div>
+
+        <!-- Pizza Size -->
+        <div class="col-md-6">
+            <label class="form-label d-block">Size</label>
+            <div class="form-check form-check-inline">
                 <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    placeholder="John Doe"
+                    class="form-check-input"
+                    type="radio"
+                    name="size"
+                    id="small"
+                    value="Small"
                     required
                 />
+                <label class="form-check-label" for="small">Small</label>
             </div>
-
-            <!-- Email -->
-            <div class="col-md-6">
-                <label for="email" class="form-label">Email Address</label>
+            <div class="form-check form-check-inline">
                 <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="you@example.com"
-                    required
+                    class="form-check-input"
+                    type="radio"
+                    name="size"
+                    id="medium"
+                    value="Medium"
                 />
+                <label class="form-check-label" for="medium">Medium</label>
             </div>
+            <div class="form-check form-check-inline">
+                <input
+                    class="form-check-input"
+                    type="radio"
+                    name="size"
+                    id="large"
+                    value="Large"
+                />
+                <label class="form-check-label" for="large">Large</label>
+            </div>
+        </div>
 
-            <!-- Pizza Type -->
-            <div class="col-md-6">
-                <label for="pizzaType" class="form-label">Choose Pizza</label>
-                <select class="form-select" id="pizzaType" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option>Margherita</option>
-                    <option>Pepperoni</option>
-                    <option>Veggie</option>
-                    <option>BBQ Chicken</option>
-                    <option>Hawaiian</option>
-                </select>
+        <!-- Toppings -->
+        <div class="col-12">
+            <label class="form-label d-block">Extra Toppings</label>
+            <div class="form-check form-check-inline">
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="extraCheese"
+                    name="toppings"
+                    value="Extra Cheese"
+                />
+                <label class="form-check-label" for="extraCheese">🧀 Extra Cheese</label>
             </div>
+            <div class="form-check form-check-inline">
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="mushrooms"
+                    name="toppings"
+                    value="Mushrooms"
+                />
+                <label class="form-check-label" for="mushrooms">🍄 Mushrooms</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="olives"
+                    name="toppings"
+                    value="Olives"
+                />
+                <label class="form-check-label" for="olives">🫒 Olives</label>
+            </div>
+        </div>
 
-            <!-- Pizza Size -->
-            <div class="col-md-6">
-                <label class="form-label d-block">Size</label>
-                <div class="form-check form-check-inline">
-                    <input
-                        class="form-check-input"
-                        type="radio"
-                        name="size"
-                        id="small"
-                        value="Small"
-                        required
-                    />
-                    <label class="form-check-label" for="small">Small</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                        class="form-check-input"
-                        type="radio"
-                        name="size"
-                        id="medium"
-                        value="Medium"
-                    />
-                    <label class="form-check-label" for="medium">Medium</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                        class="form-check-input"
-                        type="radio"
-                        name="size"
-                        id="large"
-                        value="Large"
-                    />
-                    <label class="form-check-label" for="large">Large</label>
-                </div>
-            </div>
+        <!-- Special Instructions -->
+        <div class="col-12">
+            <label for="instructions" class="form-label">Special Instructions</label>
+            <textarea
+                class="form-control"
+                id="instructions"
+                name="instructions"
+                rows="3"
+                placeholder="Any allergies, requests, etc."
+            ></textarea>
+        </div>
 
-            <!-- Toppings -->
-            <div class="col-12">
-                <label class="form-label d-block">Extra Toppings</label>
-                <div class="form-check form-check-inline">
-                    <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="extraCheese"
-                        value="Extra Cheese"
-                    />
-                    <label class="form-check-label" for="extraCheese">🧀 Extra Cheese</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="mushrooms"
-                        value="Mushrooms"
-                    />
-                    <label class="form-check-label" for="mushrooms">🍄 Mushrooms</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="olives"
-                        value="Olives"
-                    />
-                    <label class="form-check-label" for="olives">🫒 Olives</label>
-                </div>
-            </div>
-
-            <!-- Special Instructions -->
-            <div class="col-12">
-                <label for="instructions" class="form-label">Special Instructions</label>
-                <textarea
-                    class="form-control"
-                    id="instructions"
-                    rows="3"
-                    placeholder="Any allergies, requests, etc."
-                ></textarea>
-            </div>
-
-            <!-- Submit Button -->
-            <div class="col-12 text-center">
-                <button type="submit" class="btn btn-success px-5">
-                    Place Order
-                </button>
-            </div>
-        </form>
-    </div>
+        <!-- Submit Button -->
+        <div class="col-12 text-center">
+            <button type="submit" class="btn btn-success px-5">
+                Place Order
+            </button>
+        </div>
+    </form>
+</div>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">

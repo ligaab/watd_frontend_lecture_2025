@@ -24,11 +24,12 @@ body {
 
 header h1 {
   animation: colorChange 4s infinite;
+  transition: color 0.3s ease;
 }
 
 header:hover h1 {
-  color: #28a745 !important; /* Bootstrap green */
-  animation: none !important;  /* Stop the color cycling animation while hovered */
+  animation-play-state: paused !important; /* pauses animation */
+  color: #28a745 !important;
 }
 
 /* 2. Pizza card hover scale + shadow */

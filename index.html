@@ -1,51 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Test Pizza Form</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <title>Pizza Paradise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="main.css" />
 </head>
 <body>
 
-  <header class="bg-danger text-white text-center py-4">
-    <h1 class="mb-0">Pizza Paradise 🍕</h1>
-    <p class="lead">Your favorite pizza is just a click away!</p>
-  </header>
+    <!-- Header -->
+    <header class="bg-danger text-white text-center py-4">
+        <h1 class="mb-0">Pizza Paradise 🍕</h1>
+        <p class="lead">Your favorite pizza is just a click away!</p>
+    </header>
 
-  <div class="container my-5">
-    <h2 class="text-center mb-4">Order Your Pizza 🍽️</h2>
-    <form class="row g-3">
-      <div class="col-md-6">
-        <label class="form-label">Name</label>
-        <input type="text" class="form-control" />
-      </div>
-      <div class="col-md-6">
-        <label class="form-label">Email</label>
-        <input type="email" class="form-control" />
-      </div>
-      <div class="col-md-6">
-        <label class="form-label">Pizza Type</label>
-        <select class="form-select">
-          <option>Margherita</option>
-          <option>Pepperoni</option>
-        </select>
-      </div>
-      <div class="col-md-6">
-        <label class="form-label d-block">Size</label>
-        <input type="radio" name="size" class="form-check-input" /> Small
-        <input type="radio" name="size" class="form-check-input ms-2" /> Medium
-        <input type="radio" name="size" class="form-check-input ms-2" /> Large
-      </div>
-      <div class="col-12 text-center mt-4">
-        <button type="submit" class="btn btn-success px-5">Place Order</button>
-      </div>
-    </form>
-  </div>
+    <!-- Navbar with Dropdown -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container">
+            <a class="navbar-brand" href="#">Pizza Paradise</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-  <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">© 2025 Pizza Paradise</p>
-  </footer>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="pizzaDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Pizza Types
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="pizzaDropdown">
+                            <li><a class="dropdown-item" href="#">Margherita 🍕</a></li>
+                            <li><a class="dropdown-item" href="#">Pepperoni 🍕</a></li>
+                            <li><a class="dropdown-item" href="#">Veggie 🌱🍕</a></li>
+                            <li><a class="dropdown-item" href="#">BBQ Chicken 🍗🍕</a></li>
+                            <li><a class="dropdown-item" href="#">Hawaiian 🍍🍕</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row justify-content-center gy-4">
+            <!-- Pizza 1 -->
+            <div class="col-md-4">
+                <div class="pizza-card p-4 text-center bg-white rounded shadow-sm">
+                    <div class="emoji fs-2">🍕</div>
+                    <h3 class="mt-3">Margherita</h3>
+                    <p>A classic pizza topped with fresh tomatoes, mozzarella, and basil.</p>
+                </div>
+            </div>
+
+            <!-- Pizza 2 -->
+            <div class="col-md-4">
+                <div class="pizza-card p-4 text-center bg-white rounded shadow-sm">
+                    <div class="emoji fs-2">🍕</div>
+                    <h3 class="mt-3">Pepperoni</h3>
+                    <p>Spicy pepperoni, mozzarella, and a rich tomato sauce make this pizza a crowd favorite.</p>
+                </div>
+            </div>
+
+            <!-- Pizza 3 -->
+            <div class="col-md-4">
+                <div class="pizza-card p-4 text-center bg-white rounded shadow-sm">
+                    <div class="emoji fs-2">🌱🍕</div>
+                    <h3 class="mt-3">Veggie</h3>
+                    <p>Loaded with bell peppers, onions, mushrooms, olives, and spinach on a mozzarella base.</p>
+                </div>
+            </div>
+
+            <!-- Pizza 4 -->
+            <div class="col-md-4">
+                <div class="pizza-card p-4 text-center bg-white rounded shadow-sm">
+                    <div class="emoji fs-2">🍗🍕</div>
+                    <h3 class="mt-3">BBQ Chicken</h3>
+                    <p>Grilled chicken, tangy BBQ sauce, and mozzarella create a deliciously smoky flavor.</p>
+                </div>
+            </div>
+
+            <!-- Pizza 5 -->
+            <div class="col-md-4">
+                <div class="pizza-card p-4 text-center bg-white rounded shadow-sm">
+                    <div class="emoji fs-2">🍍🍕</div>
+                    <h3 class="mt-3">Hawaiian</h3>
+                    <p>A sweet and savory mix of ham and pineapple on a cheesy base.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Form Section -->
+    <div class="container my-5">
+        <h2 id="orderForm" class="text-center mb-4">Order Your Pizza 🍽️</h2>
+        <form class="row g-3">
+            <!-- Name -->
+            <div class="col-md-6">
+                <label for="name" class="form-label">Full Name</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="John Doe"
+                    required
+                />
+            </div>
+
+            <!-- Email -->
+            <div class="col-md-6">
+                <label for="email" class="form-label">Email Address</label>
+                <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="you@example.com"
+                    required
+                />
+            </div>
+
+            <!-- Pizza Type -->
+            <div class="col-md-6">
+                <label for="pizzaType" class="form-label">Choose Pizza</label>
+                <select class="form-select" id="pizzaType" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>Margherita</option>
+                    <option>Pepperoni</option>
+                    <option>Veggie</option>
+                    <option>BBQ Chicken</option>
+                    <option>Hawaiian</option>
+                </select>
+            </div>
+
+            <!-- Pizza Size -->
+            <div class="col-md-6">
+                <label class="form-label d-block">Size</label>
+                <div class="form-check form-check-inline">
+                    <input
+                        class="form-check-input"
+                        type="radio"
+                        name="size"
+                        id="small"
+                        value="Small"
+                        required
+                    />
+                    <label class="form-check-label" for="small">Small</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input
+                        class="form-check-input"
+                        type="radio"
+                        name="size"
+                        id="medium"
+                        value="Medium"
+                    />
+                    <label class="form-check-label" for="medium">Medium</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input
+                        class="form-check-input"
+                        type="radio"
+                        name="size"
+                        id="large"
+                        value="Large"
+                    />
+                    <label class="form-check-label" for="large">Large</label>
+                </div>
+            </div>
+
+            <!-- Toppings -->
+            <div class="col-12">
+                <label class="form-label d-block">Extra Toppings</label>
+                <div class="form-check form-check-inline">
+                    <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="extraCheese"
+                        value="Extra Cheese"
+                    />
+                    <label class="form-check-label" for="extraCheese">🧀 Extra Cheese</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="mushrooms"
+                        value="Mushrooms"
+                    />
+                    <label class="form-check-label" for="mushrooms">🍄 Mushrooms</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="olives"
+                        value="Olives"
+                    />
+                    <label class="form-check-label" for="olives">🫒 Olives</label>
+                </div>
+            </div>
+
+            <!-- Special Instructions -->
+            <div class="col-12">
+                <label for="instructions" class="form-label">Special Instructions</label>
+                <textarea
+                    class="form-control"
+                    id="instructions"
+                    rows="3"
+                    placeholder="Any allergies, requests, etc."
+                ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-success px-5">
+                    Place Order
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2025 Pizza Paradise | All Rights Reserved</p>
+    </footer>
+
+    <!-- Bootstrap JS Bundle (Popper included) -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoDY6z0FcC1pLZ/35D6bNQ//iD2ogXoPkFOJwJ8ERdknLPM"
+        crossorigin="anonymous"
+    ></script>
 </body>
 </html>

@@ -1,45 +1,6 @@
-/* Reset and Base */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-}
-
-/* Header */
-header {
-    background-color: #ff5733;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-}
-
-/* Container */
-.container {
-    width: 80%;
-    margin: 20px auto;
-}
-
-/* Pizza Cards */
-.pizza-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.pizza-card {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
-    width: 30%;
-    box-sizing: border-box;
 }
 
 .pizza-card .emoji {
@@ -47,22 +8,10 @@ header h1 {
 }
 
 .pizza-card h3 {
-    margin: 15px 0 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .pizza-card p {
-    font-size: 1rem;
     color: #666;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-footer p {
-    margin: 0;
 }
